@@ -1,7 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap");
+html,
+body {
+  width: auto;
+  height: auto;
+  font-family: "Montserrat", sans-serif;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  height: auto;
+}
+
+
+
+.card .content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  inset: 0;
+  padding: 3.5rem;
+  
+}
+
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-weight: 300;
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
 .header {
   overflow: hidden;
-  background-color:rgb(0, 0, 0.2);
-  color:white;
+  background-color:rgb(0, 0, 0);
+  color:rgb(218, 213, 213);
   padding: 20px 10px;
 }
 .card {
@@ -54,7 +95,7 @@ footer {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
     padding: 16px;
     
-    background-color: #f1f1f1;
+    background-color: #ccc;
   }
   
   /* Responsive columns - one column layout (vertical) on small screens */
@@ -87,6 +128,7 @@ footer {
     object-fit: cover;
     margin-right: 10px;
     border-radius: 8px;
+    background-color: #ccc;
   }
 
   .card-text {
@@ -96,3 +138,7 @@ footer {
     border-radius: 8px;
     flex-grow: 1;
   }
+
+i:hover{
+  color: rgb(126, 208, 233);
+}
