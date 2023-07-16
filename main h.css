@@ -148,3 +148,32 @@ footer {
  a{
   color: white;
  }
+ button{
+
+  padding: 2px 3px;
+  
+  background-color: #413e4d; color: #d3bc59;
+  
+  font-weight: bold;
+  
+  border: none;
+  
+  border-radius: 5px; overflow: hidden;
+  
+  letter-spacing: 4px;
+  
+  transition: 0.55; cursor: pointer;
+ }
+  
+  button:hover{
+  
+  background: #e7d748; color: #050801;
+  
+  box-shadow: 0 0 5px #03e9f4,
+  
+  00 25px #03e9f4,
+  
+  00 50px #03e9f4, 90 200px #03e9f4;
+  
+  -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  }
