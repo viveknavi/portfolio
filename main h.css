@@ -1,3 +1,6 @@
+
+
+
 .card .content {
   position: absolute;
   display: flex;
@@ -173,6 +176,18 @@ footer {
   00 50px #03e9f4, 90 200px #03e9f4;
   
   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+  }
+  button::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #2bd576;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+  }
+  button:hover::after{
+    transform: scale(1);
   }
   .column:hover{
     
