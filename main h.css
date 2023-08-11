@@ -1,28 +1,158 @@
-
-
-
-.card .content {
-  position: absolute;
+.card {
+  background: #07182E;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  inset: 0;
-  padding: 3.5rem;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.card1 {
+  background: #07182E;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.card1 .header {
+  z-index: 1;
+  color: white;
+}
+.card1 .body1 {
+  z-index: 1;
+  color: white;
+}
+
+.card11 {
+ width: auto;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}.card11 .card-img {
+  z-index: 4;
+  color: white;
+  border-radius: 50%;
+  padding: 5px;
+  width: 150px;
   
 }
 
-
-h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+.card11 .card-text {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+.column2 h5 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+.column h5{
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+.column1 h5 {
+  z-index: 1;
+  color: white;
+  font-size: 2em;
+}
+.card p {
+  z-index: 1;
+  color: white;
+  
+}
+.card ol {
+  z-index: 1;
+  color: white;
+  
+}
+.card ul {
+  z-index: 1;
+  color: white;
+  
+}
+.card11::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+.card1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
 }
 
-p {
-  font-weight: 300;
-  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
+
+.card11::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+.card1::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+.card::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+  height: 130%;
+  animation: rotBGimg 3s linear infinite;
+  transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  background: #07182E;
+  ;
+  inset: 5px;
+  border-radius: 15px;
+}  
+
 header {
   overflow: hidden;
  background-color:rgb(0, 0, 0);
@@ -31,16 +161,6 @@ header {
   width: 100%;
   height: 65px;
   background-image:url(https://img.freepik.com/free-photo/gradient-dark-blue-futuristic-digital-grid-background_53876-129728.jpg?size=626&ext=jpg&ga=GA1.1.1369040139.1688589557&semt=ais);
-
- 
-}
-.card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
-}
-.card-body{
-    background-color: azure;
 }
 
 footer {
@@ -56,16 +176,6 @@ footer {
   
   
 }
-  * {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url(https://i.pinimg.com/736x/0b/54/ad/0b54ad77d01e78e69b9d93714771e29a.jpg);
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-  }
   
   /* Float four columns side by side */
   .column2 {
@@ -80,15 +190,6 @@ footer {
   }
  
   
-  /* Remove extra left and right margins, due to padding in columns */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
   
   /* Style the counter cards */
   .card {
@@ -129,14 +230,7 @@ footer {
     border-radius: 5px;
   }
 
-  .card img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 10px;
-    border-radius: 8px;
-    background-color: #ccc;
-  }
+  
 
   .card-text {
     padding-left: 20px;
@@ -148,62 +242,196 @@ footer {
  a{
   color: white;
  }
- button{
-   border-radius: 50px;
-background: #e0e0e0;
-box-shadow:  -20px -20px 60px #bebebe,
-             20px 20px 60px #ffffff;
-
-  padding: 2px 3px;
-  
-  background-color: #413e4d; color: #d3bc59;
-  
+ button {
   font-weight: bold;
-  
+  color: white;
+  border-radius: 2rem;
+  width: 95.02px;
+  height: 42.66px;
   border: none;
+  background-color: #3653F8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .span-mother {
+  display: flex;
+  overflow: hidden;
+}
+
+button:hover .span-mother {
+  position: absolute;
+}
+
+button:hover .span-mother span {
+  transform: translateY(1.2em);
+}
+
+button .span-mother span:nth-child(1) {
+  transition: .2s;
+}
+
+button .span-mother span:nth-child(2) {
+  transition: .3s;
+}
+
+button .span-mother span:nth-child(3) {
+  transition: .4s;
+}
+
+button .span-mother span:nth-child(4) {
+  transition: .5s;
+}
+
+button .span-mother span:nth-child(5) {
+  transition: .6s;
+}
+
+button .span-mother span:nth-child(6) {
+  transition: .7s;
+}
+
+button .span-mother2 {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+button .span-mother2 span {
+  transform: translateY(-1.2em);
+}
+
+button:hover .span-mother2 span {
+  transform: translateY(0);
+}
+
+button .span-mother2 span {
+  transition: .2s;
+}
+
+button .span-mother2 span:nth-child(2) {
+  transition: .3s;
+}
+
+button .span-mother2 span:nth-child(3) {
+  transition: .4s;
+}
+
+button .span-mother2 span:nth-child(4) {
+  transition: .5s;
+}
+
+button .span-mother2 span:nth-child(5) {
+  transition: .6s;
+}
+
+button .span-mother2 span:nth-child(6) {
+  transition: .7s;
+}
+ 
+.card1 {
+  width: auto;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
   
-  border-radius: 5px; overflow: hidden;
-  
-  letter-spacing: 4px;
-  
-  transition: 0.55; cursor: pointer;
- }
-  
-  button:hover{
-  
-  background: #e7d748; color: #050801;
-  
-  box-shadow: 0 0 5px #03e9f4,
-  
-  00 25px #03e9f4,
-  
-  00 50px #03e9f4, 90 200px #03e9f4;
-  
-  -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-  }
-  button::after{
-    content: '';
-    display: block;
-    height: 4px;
-    width: 100%;
-    background-color: #2bd576;
-    transform: scale(0);
-    transition: transform 0.3s ease;
-  }
-  button:hover::after{
-    transform: scale(1);
-  }
-  .column:hover{
-    
-  background: #e7d748; color: #050801;
-  }
-  .column1:hover{
-    
-    background: #e7d748; color: #050801;
-    
-    }
-    .column2:hover{
-    
-      background: #e7d748; color: #050801;
-      }
-      
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.body1 {
+  padding: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 120px;
+  font-size: 16px;
+}
+
+.skill-level {
+  width: 50px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent {
+  background-color: #333;
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
+}
+.card2 {
+  width: 280px;
+  height: 150px;
+  background: rgb(17, 4, 134);
+  border-radius: 15px;
+  box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
+  display: flex;
+  color: white;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85));
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card2:hover {
+  box-shadow: rgb(0,0,0) 5px 10px 50px ,rgb(0,0,0) -5px 0px 250px;
+}
+
+.time-text {
+  font-size: 25px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 300;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.time-sub-text {
+  font-size: 15px;
+  margin-left: 5px;
+}
+
+.day-text {
+  font-size: 18px;
+  margin-top: 0px;
+  margin-left: 15px;
+  font-weight: 500;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.moon {
+  font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card2:hover > .moon {
+  font-size: 23px;
+}
+.card2{
+  float: right;
+}
