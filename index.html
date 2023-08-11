@@ -17,8 +17,48 @@
 }
 
    </script>
+   <script>
+
+    function display_ct5() {
+      var months = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+];
+var daysOfWeek = [
+  "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"
+];
+
+
+var x = new Date(); // Creating a Date object representing the current date and time
+var currentDayOfWeekIndex = x.getDay();
+var currentDayOfWeek = daysOfWeek[currentDayOfWeekIndex];
+var currentDate = x.getDate(); // Getting the day of the month
+var currentMonthIndex = x.getMonth(); // Getting the current month index (0-11)
+var currentYear = x.getFullYear(); // Getting the current year
+var currentMonthName = months[currentMonthIndex]; // Getting the abbreviated month name
+
+var formattedDate = currentDate + " " + currentMonthName + " " + currentYear;
+
+    var x = new Date()
+    var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+    
+    var x1=x.getMonth() + 1+ "/" + x.getDate() + "/" + x.getFullYear(); 
+    var x3=formattedDate;
+    var x2 =   x.getHours( )+ ":" +  x.getMinutes() + ":" +  x.getSeconds()  + ampm;
+    document.getElementById('ct7').innerHTML = currentDayOfWeek;
+    document.getElementById('ct5').innerHTML = x3;
+    document.getElementById('ct6').innerHTML = x2;
+    
+    display_c5();
+     }
+     function display_c5(){
+    var refresh=1000; // Refresh rate in milli seconds
+    mytime=setTimeout('display_ct5()',refresh)
+    }
+    display_c5()
+    </script>
 </head>
-<body>
+<body onload=display_ct();>
   
     <tr><header id="header-background">
         
@@ -28,12 +68,32 @@
     </tr>
     <tr>
         <div class="card11">
-            <img class="card img" src="./vv.jpg" alt="Image">
+            <img class="card-img" src="./vv.jpg" alt="Image" >
             <div class="card-text">
+              <div class="card2" >
+                
+                <p class="time-text"></span><br><span id='ct7'></span><br><span id='ct5'></span><br><span id='ct6'></p>
+               
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" stroke-width="0" fill="currentColor" stroke="currentColor" class="moon"><path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+                  <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path></svg>
+                </div>
                 <h2 class="card-title">Vivek Navi</h2>
-               <button onclick="redirectToPage()">CV</button>
+               <button onclick="redirectToPage()">
+                <span class="span-mother">
+                    <span>C</span>
+                    <span>V</span>
+                   
+                </span>
+                <span class="span-mother2">
+                    <span>C</span>
+                    <span>V</span>
+                    
+                </span>
+              </button>
+              
             </div>
           </div>
+         
     </tr>
     <tr>
           <div>
@@ -51,21 +111,60 @@
            
             </div>
             <div class="column1">
-              <div class="card"><h5 class="card-title"><b>Skills</b></h5>
-                <p class="card-text">
-                    
-                        <ol>
-                            <li>Core java</li>
-                            <li>Html</li>
-                            <li>CSS</li>
-                            <li>Javascript</li>
-                            <li>Bootstrap</li>
-                        </ol>
-                    
-                   </p></div>
+              <div class="card1">
+                
+                <div class="body1">
+                  <h5 align="center">My Skills</h5>
+                  <div> &nbsp;</div>
+                  <div class="skill">
+                    <div class="skill-name">Core Java</div>
+                    <div class="skill-level">
+                      <div class="skill-percent" style="width: 75%"></div>
+                    </div>
+                    <div class="skill-percent-number">85%</div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-name">Python</div>
+                    <div class="skill-level">
+                      <div class="skill-percent" style="width: 50%"></div>
+                    </div>
+                    <div class="skill-percent-number">75%</div>
+                  </div>
+                  <div class="skill">
+                   
+                    <div class="skill-name">HTML</div>
+                    <div class="skill-level">
+                      <div class="skill-percent" style="width: 90%"></div>
+                    </div>
+                    <div class="skill-percent-number">90%</div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="skill-level">
+                      <div class="skill-percent" style="width: 80%"></div>
+                    </div>
+                    <div class="skill-percent-number">80%</div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="skill-level">
+                      <div class="skill-percent" style="width: 75%"></div>
+                    </div>
+                    <div class="skill-percent-number">75%</div>
+                  </div>
+                  <div class="skill">
+                    <div class="skill-name">Bootstrap</div>
+                    <div class="skill-level">
+                      <div class="skill-percent" style="width: 75%"></div>
+                    </div>
+                    <div class="skill-percent-number">85%</div>
+                  </div>
+                </div>
+              </div>
+              
             </div>
             <div class="column1">
-                <div class="card"><h5 class="card-title"><b>Certificates</b></h5>
+                <div class="card"><h5 ><b>Certificates</b></h5>
                   <p class="card-text">
                       
                           <ol>
@@ -79,7 +178,7 @@
                      </p></div>
               </div>
             <div class="column2">
-              <div class="card"><h5 class="card-title"><b>Projects</b> </h5>
+              <div class="card"><h5 ><b>Projects</b> </h5>
                 <p class="card-text">
                     
                         <ul>
@@ -94,7 +193,7 @@
                     
                    </p></div></div>
                    <div class="column2">
-                    <div class="card"><h5 class="card-title"><b>Projects</b></h5>
+                    <div class="card"><h5 ><b>Projects</b></h5>
                       <p class="card-text">
                           
                               <ul>
