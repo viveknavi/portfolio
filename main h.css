@@ -380,8 +380,8 @@ button .span-mother2 span:nth-child(6) {
   font-size: 16px;
 }
 .card2 {
-  width: 280px;
-  height: 150px;
+  width: auto;
+  height: auto;
   background: rgb(17, 4, 134);
   border-radius: 15px;
   box-shadow: rgb(0,0,0,0.7) 5px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px;
