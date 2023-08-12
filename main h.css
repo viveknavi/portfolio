@@ -202,7 +202,7 @@ footer {
   /* Responsive columns - one column layout (vertical) on small screens */
   @media screen and (min-width: 600px) {
     .body1 {
-     max-width: fit-content; width: 100%;
+    width: 100%;
       display: block;
       margin-bottom: 20px;
     }
