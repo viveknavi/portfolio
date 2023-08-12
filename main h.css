@@ -200,14 +200,20 @@ footer {
   }
   
   /* Responsive columns - one column layout (vertical) on small screens */
-  @media screen and (min-width: 600px) {
-    .body1 {
-    width: 100%;
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
       display: block;
       margin-bottom: 20px;
     }
   }
-
+  @media screen and (max-width: 600px) {
+    .body1 {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
   @media screen and (max-width: 600px) {
     .column1 {
       width: 100%;
@@ -217,7 +223,6 @@ footer {
   }
     @media screen and (max-width: 600px) {
       .column2 {
-    
         width: 100%;
         display: block;
         margin-bottom: 20px;
@@ -334,7 +339,6 @@ button .span-mother2 span:nth-child(6) {
  
 .card1 {
   width: auto;
-  max-width: fit-content;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
